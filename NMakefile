@@ -1,0 +1,5 @@
+all:
+	cl /nologo /c /Fo:module.obj module.c
+	cl /nologo /c /Fo:prog.obj prog.c
+	cl /nologo /Fe:prog.exe prog.obj /link /implib:prog.lib
+	cl /nologo module.obj prog.lib /link /dll /out:module.dll /implib:module.lib

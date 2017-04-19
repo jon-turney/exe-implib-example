@@ -27,6 +27,7 @@ main (int argc, char **argv)
 
   if (!h) {
     printf ("failed to load library\n");
+    exit(1);
   }
 
 #ifdef _WIN32
